@@ -1,0 +1,39 @@
+1. A wide range of pets supported.
+2. Give breed specific advice
+3. Give reminders to food time, walks etc.
+5. Track meal plans, diets, and vet appointments.
+6. Have a free tier along side a paid one.
+
+One thing I tell you, Accounting for all the pet types in the start is unfealsible. So what we can do is start with a small group of them and add new as the app grows. Also when the company grows please hire vets and stuff to adivce and curate the advices we give
+You can reach to real doctors and stuff to factcheck advices I code in, it is not my job and my expertise to fact check every medical advice I pull off the internet.
+
+
+✅ Home Screen
+
+    Background: #1E2A38
+
+    Cards/Panels: #2C3E50 with border #3A4B5C
+
+    Primary Action Buttons: #4C8EDA
+
+    Text: #F1F5F9 (headers), #A0B3C5 (details)
+
+🐾 Pets Screen
+
+    Card Background: #2C3E50
+
+    Pet Name: #F1F5F9
+
+    Edit/Delete Icons: Hover #6FB2F2, Delete #F16C6C
+
+    Tags (Healthy / Needs Vaccine): #3ED6B5 / #F9C97D
+
+⚙️ Settings Screen
+
+    Panel Background: #2C3E50
+
+    Toggle Active: #4C8EDA
+
+    Toggle Inactive: #3A4B5C
+
+    Labels: #A0B3C5
