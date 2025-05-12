@@ -3,9 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import { StyleSheet} from "react-native";
 
-import HomeScreen from "../screens/HomeScreen";
-import PetsScreen from "../screens/PetsScreen";
-import SettingsScreen from "../screens/SettingsScreen";
+import routes from './routes';
 
 const Tab = createBottomTabNavigator();
 
@@ -15,7 +13,7 @@ export default function AppNavigator() {
       initialRouteName="Home"
       screenOptions={{
         tabBarStyle: styles.tabBarStyle,
-        tabBarActiveTintColor: "#f1f3ff",
+        tabBarActiveTintColor: "#FFFFFF",
         tabBarInactiveTintColor: "#4C8EDA",
         tabBarShowLabel: false,
         tabBarButton: (props) => (
@@ -37,33 +35,22 @@ export default function AppNavigator() {
         headerTitleAlign: "center",
       }}
     >
-      <Tab.Screen
-        name="Pets"
-        component={PetsScreen}
-        options={{
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="paw-outline" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="home-outline" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Settings"
-        component={SettingsScreen}
-        options={{
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="settings-outline" size={size} color={color} />
-          ),
-        }}
-      />
+      {routes.map((route) => (
+        <Tab.Screen
+          key = {route.name}
+          name={route.name}
+          component={route.component}
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons
+                name={route.iconName as keyof typeof Ionicons.glyphMap}
+                size={size}
+                color={color}
+              />
+            ),
+          }}
+        />
+      ))}
     </Tab.Navigator>
   );
 }
