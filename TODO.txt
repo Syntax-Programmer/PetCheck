@@ -37,3 +37,7 @@ You can reach to real doctors and stuff to factcheck advices I code in, it is no
     Toggle Inactive: #3A4B5C
 
     Labels: #A0B3C5
+
+
+
+In the pet card, add in the middle last time the pet ate or had a walk.

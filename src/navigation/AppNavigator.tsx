@@ -1,9 +1,9 @@
-import { TouchableWithoutFeedback, View } from 'react-native'
+import { TouchableWithoutFeedback, View } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
-import { StyleSheet} from "react-native";
+import { StyleSheet } from "react-native";
 
-import routes from './routes';
+import routes from "./NavBarRoutes";
 
 const Tab = createBottomTabNavigator();
 
@@ -37,7 +37,7 @@ export default function AppNavigator() {
     >
       {routes.map((route) => (
         <Tab.Screen
-          key = {route.name}
+          key={route.name}
           name={route.name}
           component={route.component}
           options={{
